@@ -32,6 +32,8 @@ public class Conexion extends SQLiteOpenHelper {
         db.execSQL(Constantes.TABLA_USUARIO_FRECUENCIAS);
         db.execSQL(Constantes.TABLA_COOPER);
         db.execSQL(Constantes.TABLA_COOPER_USUARIO);
+        db.execSQL(Constantes.TABLA_FLEXIONES);
+        db.execSQL(Constantes.TABLA_FLEXIONES_USUARIO);
     }
 
     @Override
@@ -146,22 +148,50 @@ public class Conexion extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         ContentValues contentValues2 = new ContentValues();
         String resultado = null;
-        if(distancia>2000){
+        if(distancia>2000 && distancia<5000){
             resultado = "Buena";
-        }else if(distancia>5000){
+        }else if(distancia>=5000){
             resultado = "Excelente";
         }else{
             resultado = "Mala";
         }
 
         contentValues.put("fecha_test", date);
-        contentValues.put("distancia", date);
+        contentValues.put("distancia", distancia);
         contentValues.put("resultado", resultado);
 
         contentValues2.put("numero_cedula",cedula);
 
         long result = db.insert("cooper", null, contentValues);
         long result2 = db.insert("usuario_cooper", null, contentValues2);
+        if (result == -1 || result2 == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public boolean insertarFlexiones(int cedula, int repeticiones, String date) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        ContentValues contentValues2 = new ContentValues();
+        String resultado = null;
+        if(repeticiones>20 && repeticiones<40){
+            resultado = "Buena";
+        }else if(repeticiones>=40){
+            resultado = "Excelente";
+        }else{
+            resultado = "Mala";
+        }
+
+        contentValues.put("fecha_test", date);
+        contentValues.put("repeticiones", repeticiones);
+        contentValues.put("resultado", resultado);
+
+        contentValues2.put("numero_cedula",cedula);
+
+        long result = db.insert("flexiones", null, contentValues);
+        long result2 = db.insert("usuario_flexiones", null, contentValues2);
         if (result == -1 || result2 == -1) {
             return false;
         } else {

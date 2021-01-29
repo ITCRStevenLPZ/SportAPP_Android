@@ -33,6 +33,7 @@
     <string name="prompt_altura">Altura</string>
     <string name="prompt_gender">Sexo</string>
     <string name="prompt_distance">Distancia</string>
+    <string name="prompt_repetitions">Repeticiones</string>
 
     <string name="action_ingreso_peso">Ingresar Peso</string>
     <string name="action_consulta_peso">Consultar Pesos</string>
@@ -42,6 +43,9 @@
 
     <string name="action_consulta_cooper">Consultar Cooper</string>
     <string name="action_ingreso_cooper">Ingresar Cooper</string>
+
+    <string name="action_consulta_flexiones">Consultar Flexiones</string>
+    <string name="action_ingreso_flexiones">Ingresar Flexiones</string>
 
     <string name="welcome">"Bienvenido a SportAPP !"</string>
     <string name="invalid_username">No es un nombre de usuario válido</string>

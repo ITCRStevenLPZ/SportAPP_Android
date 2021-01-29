@@ -20,10 +20,53 @@ public class TestsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.testmenu);
         conn = new Conexion(this, Constantes.DATABASE_NAME, 1);
-        final Button frecuencias = findViewById(R.id.menu_frecuencias);
-        final Button pesos = findViewById(R.id.menu_pesos);
-        final Button tests = findViewById(R.id.menu_tests);
+        final Button logout = findViewById(R.id.logout);
+        final Button cooper = findViewById(R.id.test_cooper);
+        final Button flexiones = findViewById(R.id.test_flexiones);
 
+        cooper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle extras = getIntent().getExtras();
+
+                if (extras != null) {
+                    int cedula = extras.getInt("cedula");
+                    String usuario = extras.getString("usuario");
+                    String contrasena = extras.getString("contrasena");
+
+                    Intent i = new Intent(TestsActivity.this, CooperActivity.class);
+                    i.putExtra("cedula",cedula);
+                    i.putExtra("usuario",usuario.toString());
+                    i.putExtra("contrasena",contrasena.toString());
+                    startActivity(i);
+                }
+            }
+        });
+        flexiones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle extras = getIntent().getExtras();
+
+                if (extras != null) {
+                    int cedula = extras.getInt("cedula");
+                    String usuario = extras.getString("usuario");
+                    String contrasena = extras.getString("contrasena");
+
+                    Intent i = new Intent(TestsActivity.this, FlexionesActivity.class);
+                    i.putExtra("cedula",cedula);
+                    i.putExtra("usuario",usuario.toString());
+                    i.putExtra("contrasena",contrasena.toString());
+                    startActivity(i);
+                }
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(TestsActivity.this, Logout.class);
+                startActivity(i);
+            }
+        });
     }
 
 }

@@ -59,10 +59,24 @@ public class Constantes {
             ")";
     public static String TABLA_COOPER_USUARIO =
             "create table usuario_cooper(" +
-            "numero_cedula integernot null," +
-            "id_cooper INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "foreign key (numero_cedula) references usuarios(numero_cedula)" +
-            ")";
+                    "numero_cedula integer not null," +
+                    "id_cooper INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "foreign key (numero_cedula) references usuarios(numero_cedula)" +
+                    ")";
+    public static String TABLA_FLEXIONES =
+            "create table flexiones(" +
+                    "id_flexiones INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "fecha_test date not null," +
+                    "repeticiones number not null," +
+                    "resultado text" +
+                    ")";
+    public static String TABLA_FLEXIONES_USUARIO =
+            "create table usuario_flexiones(" +
+                    "numero_cedula integer not null," +
+                    "id_flexiones INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "foreign key (numero_cedula) references usuarios(numero_cedula)" +
+                    ")";
+
 
 
     public static String DROP_USUARIOS = "DROP TABLE IF EXISTS usuarios";
