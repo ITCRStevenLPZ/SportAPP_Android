@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">SportAPP</string>
+    <!-- Strings related to login -->
+    <string name="image_pesos">Romana</string>
+    <string name="image_frecuencias">Electrocardiograma</string>
+    <string name="image_tests">Persona Corriendo</string>
+
+    <string name="action_logout">Cerrar Sesión</string>
+    <string name="action_tests">Pruebas Físicas</string>
+    <string name="action_frecuencias">Frecuencias Cardiacas</string>
+    <string name="action_pesos">Registro y Control de Pesos</string>
+    <string name="action_forgot">Olvidé Contraseña</string>
+    <string name="action_restore">Recuperar Contraseña</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_back">Atrás</string>
+    <string name="action_sign_in">Iniciar Sesión</string>
+    <string name="action_sign_in_short">Iniciar Sesión</string>
+    <string name="action_sign_up">Registrarse</string>
+    <string name="action_test_cooper">Test de Cooper (correr)</string>
+    <string name="action_test_flexiones">Test de Flexiones (push-ups)</string>
+
+
+    <string name="prompt_username">Nombre de Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="prompt_confirm_password">Repetir Contraseña</string>
+    <string name="prompt_name">Nombre</string>
+    <string name="prompt_lastname">Apellido</string>
+    <string name="prompt_nacimiento">Fecha de Nacimiento</string>
+    <string name="prompt_lastname2">Segundo Apellido</string>
+    <string name="prompt_cedula">Cédula</string>|
+    <string name="prompt_phone">Número de Teléfono</string>|
+    <string name="prompt_answer">Respuesta</string>
+    <string name="prompt_altura">Altura</string>
+    <string name="prompt_gender">Sexo</string>
+    <string name="prompt_distance">Distancia</string>
+
+    <string name="action_ingreso_peso">Ingresar Peso</string>
+    <string name="action_consulta_peso">Consultar Pesos</string>
+
+    <string name="action_ingreso_frecuencia">Ingresar Frecuencia</string>
+    <string name="action_consulta_frecuencia">Consultar Frecuencia</string>
+
+    <string name="action_consulta_cooper">Consultar Cooper</string>
+    <string name="action_ingreso_cooper">Ingresar Cooper</string>
+
+    <string name="welcome">"Bienvenido a SportAPP !"</string>
+    <string name="invalid_username">No es un nombre de usuario válido</string>
+    <string name="invalid_password">La contraseña es muy corta!</string>
+    <string name="login_failed">"No se ha podido ingresar sesión!"</string>
+
+
+    <string name="option_male">Hombre</string>
+    <string name="option_female">Mujer</string>
+
+    <string name="question_color">Color Favorito</string>
+    <string name="question_sport">Deporte Favorito</string>
+    <string name="question_origin">Lugar de Origen</string>
+    <string name="question_peso">Peso en kilos</string>
+    <string name="question_frecuencia">Frecuencias (BPM)</string>
+    <string name="question_fecha">Fecha De Medicion</string>
+    <string name="question_descripcion">Descripcion</string>
+</resources>

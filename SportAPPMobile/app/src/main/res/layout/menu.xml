@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:fadeScrollbars="false"
+    android:focusable="true">
+
+    <Button
+        android:id="@+id/menu_pesos"
+        android:layout_width="222dp"
+        android:layout_height="93dp"
+        android:text="@string/action_pesos"
+        app:layout_constraintBottom_toTopOf="@+id/menu_frecuencias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pesos"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/menu_frecuencias"
+        android:layout_width="222dp"
+        android:layout_height="93dp"
+        android:text="@string/action_frecuencias"
+        app:layout_constraintBottom_toTopOf="@+id/menu_tests"
+        app:layout_constraintEnd_toStartOf="@+id/frecuencias"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_pesos" />
+
+    <Button
+        android:id="@+id/menu_tests"
+        android:layout_width="222dp"
+        android:layout_height="93dp"
+        android:text="@string/action_tests"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tests"
+        app:layout_constraintTop_toBottomOf="@+id/menu_frecuencias" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="212dp"
+        android:layout_height="169dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/pesos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logout"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/pesos"
+        android:layout_width="120dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/image_pesos"
+        app:layout_constraintBottom_toTopOf="@+id/frecuencias"
+        app:layout_constraintEnd_toStartOf="@+id/menu_pesos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/scale" />
+
+    <ImageView
+        android:id="@+id/tests"
+        android:layout_width="125dp"
+        android:layout_height="95dp"
+        android:contentDescription="@string/image_tests"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/menu_tests"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frecuencias"
+        app:layout_constraintVertical_bias="0.459"
+        app:srcCompat="@drawable/tests" />
+
+    <ImageView
+        android:id="@+id/frecuencias"
+        android:layout_width="119dp"
+        android:layout_height="108dp"
+        android:contentDescription="@string/image_frecuencias"
+        app:layout_constraintBottom_toTopOf="@+id/menu_tests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/menu_frecuencias"
+        app:layout_constraintTop_toBottomOf="@+id/menu_pesos"
+        app:srcCompat="@drawable/hearth" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/action_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
